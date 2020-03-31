@@ -16,22 +16,32 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.Translate(-3, 0, 0);
+            if (transform.position.x > -9)
+            {
+                transform.Translate(-3, 0, 0);
+            }
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.Translate(3, 0, 0);
-        
+            if (transform.position.x < 9)
+            {
+                transform.Translate(3, 0, 0);
+            }
         }
     }
 
      public void LButtonDown()
         {
+        if (transform.position.x > -9)
+        {
             transform.Translate(-3, 0, 0);
+        }
         }
      public void RButtonDown() 
         {
+        if (transform.position.x < 9)
+        {
             transform.Translate(3, 0, 0);
-        
+        }
         }
 }
